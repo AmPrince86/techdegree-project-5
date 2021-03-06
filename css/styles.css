@@ -7,13 +7,27 @@
     max-width: 768px;
     justify-content: center;
     align-content: center;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
     grid-template-rows: repeat(3, 1fr);
     grid-gap: 20px 20px;
-    grid-auto-columns: 1fr;
     margin: 40px auto;
 }
 
-.photo {
-    width: auto;
+.search {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    padding-top: 35px;
+}
+
+input {
+    border: 1.5px solid rgb(209, 207, 207);
+    border-radius: 5px;
+    width: 350px;
+    height: 35px;
+    transition: .2s ease;
+}
+
+input:hover {
+    border: 2px solid #008fb3;
 }
