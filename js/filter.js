@@ -46,7 +46,7 @@
 
 let input = document.getElementById('search');
 
-function filter() {
+function Filter() {
   console.log(input.value);
   let a = document.getElementsByTagName('a');
   for (i = 0; i < a.length; i++) {
@@ -57,5 +57,5 @@ function filter() {
     }
   }
 }
-input.addEventListener('keyup', filter);
+input.addEventListener('keyup', Filter);
 
