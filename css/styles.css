@@ -2,6 +2,9 @@
     box-sizing: border-box;
 }
 /********** GRID **********/
+/*Line up images 4cols 3rows
+
+*/
 .gallery {
     display: grid;
     max-width: 1024px;
@@ -26,7 +29,7 @@ input {
     height: 35px;
     transition: .2s ease;
 }
-
+/* border around the search bar*/
 input:hover {
     border: 2px solid #008fb3;
 }
