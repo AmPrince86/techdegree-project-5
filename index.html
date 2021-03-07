@@ -11,7 +11,7 @@
 <body>
     <form action="" method="">
     <div class="search">
-        <input type="text" placeholder="search">
+        <input type="search" name="search" id="search" placeholder="search">
     </div>
     </form>
     <div class="gallery grid">
@@ -64,5 +64,10 @@
         </a>
     </div>
     <script src="js/baguetteBox.min.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            baguetteBox.run('.gallery');
+        });
+    </script>
 </body>
 </html>
