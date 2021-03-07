@@ -1,24 +1,24 @@
 //Decalre variables
 // function filter() {
-//     var filterValue, input, a, img, i;
-
+//     var filterValue, input, a, i;
 //     input = document.getElementById('search');
 //     filterValue = input.value.toLowerCase();
-//     a = document.getElementById('link').getAttribute('data-caption');
-//     img = .getAttribute('alt');
 // }
 
-// console.log(filter);
+// console.log(filter(input));
 
 //Loop through all photos, hide those who don't match the search name
 // for (i = 0; i < img.length; i++) {
-//     var a = img[i].getElementsByTagName('a')
+
+//     if (a.getAttribute("data-caption").toLowerCase().indexOf(filterValue) > -1) {
+
+//     }
 // }
 
 /*******************************************/
 
 // const search = document.querySelector('#search');
-// const boxTexts = document.getElementById("link").getAttribute("title");
+// const boxTexts = document.querySelectorAll('[data-caption]');
 
 // const handleSearch = event => {
 //     search.addEventListener('keyup', handleSearch);
@@ -35,14 +35,27 @@
 //     }
 // });
 
-document.getElementById("search").addEventListener("keyup", filter);
-function filter() {
-    var x = document.getElementById("search");
-    x.value = x.value.toLowerCase();
-}
+/*******************************************/
 
-// for () {
-
+// document.getElementById("search").addEventListener("keyup", filter);
+// function filter() {
+//     var x = document.getElementById("search");
+//     x.value = x.value.toLowerCase();
 // }
 
+
+let input = document.getElementById('search');
+
+function filter() {
+  console.log(input.value);
+  let a = document.getElementsByTagName('a');
+  for (i = 0; i < a.length; i++) {
+    if (!a[i].getAttribute('data-caption').toLowerCase().includes(input)) {
+      a[i].style.display = "none";
+    } else {
+      a[i].style.display = "";
+    }
+  }
+}
+input.addEventListener('keyup', filter);
 
