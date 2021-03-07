@@ -43,19 +43,20 @@
 //     x.value = x.value.toLowerCase();
 // }
 
+/*******************************************/
 
-let input = document.getElementById('search');
+// let input = document.getElementById('search');
 
-function Filter() {
-  console.log(input.value);
-  let a = document.getElementsByTagName('a');
-  for (i = 0; i < a.length; i++) {
-    if (!a[i].getAttribute('data-caption').toLowerCase().includes(input)) {
-      a[i].style.display = "none";
-    } else {
-      a[i].style.display = "";
-    }
-  }
-}
-input.addEventListener('keyup', Filter);
+// function Filter() {
+//   console.log(input.value);
+//   let a = document.getElementsByTagName('a');
+//   for (i = 0; i < a.length; i++) {
+//     if (!a[i].getAttribute('data-caption').toLowerCase().includes(input)) {
+//       a[i].style.display = "none";
+//     } else {
+//       a[i].style.display = "";
+//     }
+//   }
+// }
+// input.addEventListener('keyup', Filter);
 
