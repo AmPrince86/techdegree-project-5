@@ -1,62 +1,14 @@
-//Decalre variables
-// function filter() {
-//     var filterValue, input, a, i;
-//     input = document.getElementById('search');
-//     filterValue = input.value.toLowerCase();
-// }
+let searchBox = document.querySelector('#search');
+let pictures = document.querySelectorAll('a');
 
-// console.log(filter(input));
+searchBox.addEventListener('keyup', (event) => {
+    for(let i = 0; i < pictures.length; i ++) {
+        if(pictures[i].dataset.caption.includes(searchBox.value.toLowerCase()) || searchBox.value.length == 0) { //IF VALUE MATCHES PICTURE CAPTION OR NO SEARCH INPUT
+        pictures[i].style.display = "inline";
+        } else {
+        pictures[i].style.display = "none";
+        }
+    }
 
-//Loop through all photos, hide those who don't match the search name
-// for (i = 0; i < img.length; i++) {
-
-//     if (a.getAttribute("data-caption").toLowerCase().indexOf(filterValue) > -1) {
-
-//     }
-// }
-
-/*******************************************/
-
-// const search = document.querySelector('#search');
-// const boxTexts = document.querySelectorAll('[data-caption]');
-
-// const handleSearch = event => {
-//     search.addEventListener('keyup', handleSearch);
-//     const searchTerm = event.target.value.toLowerCase();
-// }
-// boxTexts.forEach(boxText => {
-//     const text = boxText.textContent.toLowerCase();
-//     const box = boxText.parentElement;
-
-//     if(text.includes(searchTerm)) {
-//         box.style.display = "block";
-//     } else {
-//         box.style.display = "none";
-//     }
-// });
-
-/*******************************************/
-
-// document.getElementById("search").addEventListener("keyup", filter);
-// function filter() {
-//     var x = document.getElementById("search");
-//     x.value = x.value.toLowerCase();
-// }
-
-/*******************************************/
-
-// let input = document.getElementById('search');
-
-// function Filter() {
-//   console.log(input.value);
-//   let a = document.getElementsByTagName('a');
-//   for (i = 0; i < a.length; i++) {
-//     if (!a[i].getAttribute('data-caption').toLowerCase().includes(input)) {
-//       a[i].style.display = "none";
-//     } else {
-//       a[i].style.display = "";
-//     }
-//   }
-// }
-// input.addEventListener('keyup', Filter);
+});
 
